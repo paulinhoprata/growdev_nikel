@@ -32,6 +32,10 @@ header {
     font-weight: 500;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .coins {
     position: absolute;
     bottom: 100px;

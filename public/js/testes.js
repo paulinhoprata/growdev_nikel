@@ -11,18 +11,18 @@ let nomes = ["Marcelo Eltz", "Paulinho Prata", "Anne Bebê"];
 let pessoas = [
     {
         nome: "Marcelo",
-        idade: "46",
-        trabalho: "Growdever"
+        idade: "30",
+        trabalho: "Growdever Senior"
     },
     {
         nome: "Paulinho",
         idade: "46",
-        trabalho: "Growdever"
+        trabalho: "Growdever Júnior"
     },
     {
         nome: "Anne",
-        idade: "46",
-        trabalho: "Growdever"
+        idade: "33",
+        trabalho: "Growdever Fake"
     }
 ];
 

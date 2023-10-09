@@ -1,17 +1,18 @@
-<!DOCTYPE html> 
-<html lang="pt"> 
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Nikel</title> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/styles.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body id="login"> 
-    <main> 
-        <div class="container"> 
-            <div class="row vh-100"> 
+<body id="login">
+    <main>
+        <div class="container">
+            <div class="row vh-100">
+                <!-- Coluna esquerda com informações -->
                 <div class="col-10 col-sm-6 d-flex justify-content-center my-5 flex-column">
                     <div class="text-login">
                         <p>Organize suas finanças de uma forma fácil</p>
@@ -23,19 +24,20 @@
                         <img src="./assets/images/coins.png" alt="image coins" class="img-fluid d-none d-md-inline coins" srcset="">
                     </div>
                 </div>
+                <!-- Coluna direita com o formulário de login -->
                 <div class="col d-flex justify-content-center my-5 flex-column">
-                    <div class="container"> 
-                        <div class="row"> 
+                    <div class="container">
+                        <div class="row">
                             <div class="col">
                                 <div class="text-center mb-3">
                                     <img src="./assets/images/nikel-logo.png" alt="logo nikel" class="img-fluid" srcset="">
                                 </div>
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row">
                             <div class="col">
                                 <!-- Formulário de login -->
-                                <form id="login-form"> 
+                                <form id="login-form">
                                     <div class="mb-3">
                                         <label for="email-input" class="form-label">E-mail</label>
                                         <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" required>
@@ -47,31 +49,31 @@
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="session-check">
-                                        <label class="form-check-label" for="session-check">Permanecer logado.</label>                                
+                                        <label class="form-check-label" for="session-check">Permanecer logado.</label>
                                     </div>
                                     <button type="submit" class="btn button-login">Entrar</button>
                                 </form>
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row">
                             <div class="col">
                                 <p id="link-conta" class="text-center mt-2 form-text" data-bs-toggle="modal" data-bs-target="#register-modal">
                                     Ainda não tem conta? <span class="link-default">Criar uma conta.</span></p>
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row">
                             <div class="col">
                                 <div class="text-center mt-5">
                                     <img src="./assets/images/codai-logo.png" alt="logo codaí" srcset="">
                                 </div>
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row">
                             <div class="col">
                                 <div class="text-center">
-                                    <img src="./assets/images/growdev-logo.png" alt="logo growdev" srcset=""> <!-- Aqui eu precisei alterar a imagem jogando ela pouca coisa para a direita para que a mesma ficasse centralizada -->
+                                    <img src="./assets/images/growdev-logo.png" alt="logo growdev" srcset="">
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,28 +90,73 @@
                     <form id="create-form">
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="email-create-inputexampleInputEmail1" class="form-label">E-mail</label>
+                                <label for="email-create-input" class="form-label">E-mail</label>
                                 <input type="email" class="form-control" id="email-create-input" aria-describedby="emailHelp" required>
                                 <div id="emailHelp" class="form-text">Utilize seu e-mail para criar a conta.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password-create-input" class="form-label">Senha</label>
                                 <input type="password" class="form-control" id="password-create-input" required>
-                                <div id="emailHelp" class="form-text">Utilize uma senha fácil de lembrar e anote para não esquecê-la.</div>
+                                <div id="password-create-help" class="form-text">Utilize uma senha fácil de lembrar e anote para não esquecê-la.</div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn button-default">Criar conta</button>
+                            <!-- <button type="button" class="btn button-default" data-bs-toggle="modal" data-bs-target="#term-of-use">Criar conta</button> -->
+                            <button type="button" class="btn button-default" id="btnCriarConta">Criar conta</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Termos de Uso -->
+        <div class="modal fade" id="term-of-use" tabindex="-1" role="dialog" aria-labelledby="Termo de Uso" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="text-center"><h5 class="modal-title" id="term-of-use-title">TERMO DE USO</h5></p>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <!-- Conteúdo do Termo de Uso -->
+                        <p>1. ACEITAÇÃO (LEIA ATÉ O FINAL)<br>
+                            Este é um termo de compromisso pessoal de uso do aplicativo Nikel desenvolvido pelo futuro Growdever Paulo Antonio da Silva sob a tutela 
+                            acadêmica do Professor Ultra-Mega-Power-AM-FM da Growdev Marcelo Eltz. Se você não concordar com estes termos não use este aplicativo. Ao 
+                            aceitar este termo, você reconhece que a Growdev concede aos seus alunos a melhor metodologia de ensino do mercado, com uma equipe de ponta, altamente 
+                            qualificada, mas que depende de você, e tão somente de você, se esforçar para adquirir o conhecimento necessário para se tornar um 
+                            desenvolvedor Full Stack de ponta no mercado, afinal, você não será apenas um programador, você será um Growdever. </p><br>
+                            <p>2. LICENÇA ILIMITADA <br>
+                            Você recebeu uma licença ilimitada, não transferível, mas exclusiva, livre de royalties e revogável para executar e utilizar este aplicativo 
+                            em seu dispositivo.</p><br>
+                            <p>3. PROPRIEDADE INTELECTUAL <br>
+                            Direitos autorais. O conteúdo aqui desenvolvido é totalmente de caráter acadêmico e, por esta razão, aberto a todos, pois o conhecimento é 
+                            algo que deve ser compartilhado bastando não ficar internado na Netflix para alcançá-lo.</p><br>
+                            <p>4. ALTERAÇÕES E MODIFICAÇÕES <br>
+                            A Growdev pode, de tempos em tempos, modificar ou descontinuar (temporária ou permanentemente) a distribuição ou a atualização deste aplicativo. 
+                            A Growdev não é obrigada a fornecer nenhum serviço de suporte para este aplicativo, incluindo correções, extensões, bancos de dados ou atualizações 
+                            de versões, pois, apesar de ser um projeto tutelado pelo Professor Marcelo, o infeliz que desenvolveu este Nikel está apenas começando na 
+                            programação, então NÃO EXIJAM DEMAIS dele.  O usuário não poderá responsabilizar a Growdev nem seus representantes funcionários, contratados, 
+                            licenciadores, pesquisadores ou alunos por quaisquer modificações, suspensões ou descontinuidade do aplicativo ou de seus serviços relacionados. </p><br>
+                            <p>5. CONSENTIMENTO PARA COLETA E USO DE DADOS<br>
+                            Você concorda que a Growdev pode coletar e usar dados técnicos de seu dispositivo tais como especificações, configurações, versões de sistema 
+                            operacional, tipo de conexão à internet e afins, mas não vai acontecer porque esta é apenas uma versão disponibilizada no GitHub para avaliação deste 
+                            futuro Growdever. </p><br>
+                            <p>6. DISPOSIÇÕES GERAIS <br>
+                            Caso qualquer uma das cláusulas e condições destes Termos de Uso venha a ser declarada nula, no todo ou em parte, por qualquer motivo legal ou 
+                            contratual, as demais cláusulas continuarão em pleno vigor e efeito. Fica eleito o foro da melhor Comarca para dirimir quaisquer litígios ou 
+                            controvérsias oriundas dos presentes Termos de Uso. </p><br>
+                            <p>IMPORTANTE: Se você teve paciência de ler até aqui, é só clicar em ACEITAR para criar a sua conta!</p><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não aceito</button>
+                        <button type="button" class="btn btn-primary" id="aceitar-termos">Aceitar e criar conta</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script> 
-    <script src="./js/transactions.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
